@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Namaskar</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="Chat">Chat</string>
+    <string name="Group">Group</string>
+    <string name="Profile">Profile</string>
+    <string name="search_hint">Search�</string>
+    <string name="no_result_found">Results not found</string>
+    <string name="select_country">Select a country</string>
+    <string name="phone_verification_text">
+        Namaskar will send an SMS message to verify your phone number. Enter your country code &amp; number.
+    </string>
+</resources>

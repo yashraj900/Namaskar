@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.register">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:text="Welcome to Namaskar"
+                android:layout_gravity="center"
+                android:textSize="22sp"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="#40B1E2"
+                android:layout_marginTop="30dp"/>
+
+            <TextView
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="16sp"
+                android:text="@string/phone_verification_text"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="#80000000"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@mipmap/account"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:id="@+id/profile"/>
+
+            <RelativeLayout
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/button2">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/transparent"
+                    android:layout_centerInParent="true"
+                    android:gravity="start"
+                    android:hint="Name"
+                    android:padding="5dp"
+                    android:id="@+id/name"/>
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <mjm.mjmca.ccp.CountryCodePicker
+                        android:visibility="visible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ccp"/>
+
+                    <EditText
+                        android:visibility="visible"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        app:backgroundTint="#40B1E2"
+                        android:id="@+id/phone_number"/>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="20dp"
+                android:visibility="visible"
+                android:layout_width="120dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:background="@drawable/otp"
+                android:text="Send otp"
+                android:id="@+id/send_otp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Send Otp"
+                    android:layout_centerInParent="true"
+                    android:textColor="#FFF"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="18sp"/>
+
+            </RelativeLayout>
+
+            <EditText
+                android:layout_marginTop="20dp"
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:backgroundTint="#40B1E2"
+                android:hint="Enter OTP"
+                android:id="@+id/enter_otp"
+                android:layout_gravity="center"/>
+
+
+            <RelativeLayout
+                android:layout_marginTop="20dp"
+                android:visibility="visible"
+                android:layout_width="120dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:background="@drawable/otp"
+                android:text="Send otp"
+                android:id="@+id/verify">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Verify"
+                    android:layout_centerInParent="true"
+                    android:textColor="#FFF"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="18sp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:layout_width="120dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:background="@drawable/otp"
+                android:text="Send otp"
+                android:id="@+id/resend_otp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Resend"
+                    android:layout_centerInParent="true"
+                    android:textColor="#FFF"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="18sp"/>
+
+            </RelativeLayout>
+
+
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <mjm.mjmca.ccp.CountryCodePicker
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ccp"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Phone Number"
+                    android:layout_gravity="center"
+                    android:id="@+id/phone_number"/>
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Send otp"
+                android:id="@+id/send_otp"/>
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Enter otp"
+                android:id="@+id/enter_otp"
+                android:layout_gravity="center"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Verify"
+                android:id="@+id/verify"/>-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already have an account?"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:textSize="18sp"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="#40B1E2"
+                android:id="@+id/login"/>
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

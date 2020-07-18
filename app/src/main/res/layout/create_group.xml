@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@mipmap/account"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="18dp"
+                android:id="@+id/group_photo"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/group_photo"
+                android:layout_marginTop="10dp"
+                android:hint="Group Name"
+                android:padding="10dp"
+                android:id="@+id/group_name"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="100dp"
+                android:layout_below="@id/group_name"
+                android:id="@+id/group_description"
+                android:hint="Description"
+                android:padding="10dp"
+                android:gravity="top"
+                android:layout_marginTop="10dp"
+                android:inputType="textMultiLine"/>
+
+            <RelativeLayout
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:background="@drawable/button"
+                android:id="@+id/create_group"
+                android:layout_below="@id/group_description"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Create"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="#000"
+                    android:layout_centerInParent="true"
+                    android:textSize="18sp"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

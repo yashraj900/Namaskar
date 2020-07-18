@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/subscriber">
+            <FrameLayout
+                android:layout_width="120dp"
+                android:layout_height="180dp"
+                android:id="@+id/publisher"
+                android:layout_gravity="bottom|end"/>
+        </FrameLayout>
+    </FrameLayout>
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/close_video_chat"
+        android:src="@drawable/callend"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>

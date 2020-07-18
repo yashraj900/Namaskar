@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:id="@+id/profile"/>
+
+            <TextView
+                android:textColor="#CC000000"
+                android:id="@+id/groupDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/dateCreated"
+                android:text="Group Description"
+                android:padding="5dp"
+                />
+            <TextView
+                android:textColor="#CC000000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Created by ABC, on dd//mm/yyy"
+                android:id="@+id/dateCreated"
+                android:layout_alignParentBottom="true"
+                android:padding="5dp"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/editGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Edit Group"
+            android:textColor="#000"
+            android:padding="5dp"/>
+        <TextView
+            android:id="@+id/addUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add User"
+            android:textColor="#000"
+            android:padding="5dp"/>
+        <TextView
+            android:id="@+id/leaveGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Leave Group"
+            android:textColor="#000"
+            android:padding="5dp"/>
+        <TextView
+            android:id="@+id/participants"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Participants (N)"
+            android:textColor="#000"
+            android:padding="5dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:id="@+id/addedUserRecyclerView"
+            tools:listitem="@layout/group_users"/>
+    </LinearLayout>
+
+
+
+</androidx.core.widget.NestedScrollView>

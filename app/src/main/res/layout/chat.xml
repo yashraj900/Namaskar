@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/contrainsLayout"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:background="@android:color/white"
+            android:layout_width="match_parent"
+            android:elevation="0dp"
+            android:layout_height="50dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_alignParentLeft="true"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_keyboard_backspace_black_24dp"
+                    android:id="@+id/back"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_centerInParent="true"
+                    android:layout_width="40dp"
+                    android:layout_toRightOf="@+id/back"
+                    android:layout_height="40dp"
+                    android:src="#7AB7EF"
+                    android:layout_marginLeft="15dp"
+                    android:id="@+id/user_profile"/>
+
+                <TextView
+                    android:layout_toRightOf="@+id/user_profile"
+                    android:layout_toLeftOf="@+id/video_call"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:id="@+id/name"
+                    android:layout_height="wrap_content"
+                    android:text="Hritik"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Online"
+                    android:visibility="gone"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_below="@id/name"
+                    android:textSize="12sp"
+                    android:layout_toRightOf="@id/user_profile"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:textColor="#25d367"
+                    android:id="@+id/online"/>
+
+
+                <ImageView
+                    android:id="@+id/menu"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/more"
+                    android:layout_centerInParent="true"/>
+
+                <!--<ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_phone_black_24dp"
+                    android:layout_toLeftOf="@+id/more"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="20dp"
+                    android:id="@+id/phone"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_videocam_black_24dp"
+                    android:layout_toLeftOf="@+id/phone"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="20dp"
+                    android:id="@+id/video_call"/>-->
+            </RelativeLayout>
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <ProgressBar
+            android:visibility="gone"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/appBarLayout"
+            android:layout_centerInParent="true"
+            android:progressDrawable="@drawable/circular_progressbar"
+            android:background="@drawable/circle_shape"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:id="@+id/progressBar"
+            android:max="100"
+            />
+
+        <ProgressBar
+            android:visibility="gone"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/appBarLayout"
+            android:layout_centerInParent="true"
+            android:progressDrawable="@drawable/circular_progressbar"
+            android:background="@drawable/circle_shape"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:id="@+id/progressBarImage"
+            android:max="100"
+            />
+
+        <ProgressBar
+            android:visibility="gone"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/appBarLayout"
+            android:layout_centerInParent="true"
+            android:progressDrawable="@drawable/circular_progressbar"
+            android:background="@drawable/circle_shape"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:id="@+id/progressBarVideo"
+            android:max="100"
+            />
+
+        <ProgressBar
+            android:visibility="gone"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/appBarLayout"
+            android:layout_centerInParent="true"
+            android:progressDrawable="@drawable/circular_progressbar"
+            android:background="@drawable/circle_shape"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:id="@+id/progressBarAudio"
+            android:max="100"
+            />
+
+        <ProgressBar
+            android:visibility="gone"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/appBarLayout"
+            android:layout_centerInParent="true"
+            android:progressDrawable="@drawable/circular_progressbar"
+            android:background="@drawable/circle_shape"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:id="@+id/progressBarMic"
+            android:max="100"
+            />
+
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/appBarLayout"
+            android:id="@+id/message_recyclerView"
+            tools:listitem="@layout/receiver_chats"
+            app:stackFromEnd="true"
+            android:scrollbars="vertical"
+            android:layout_above="@id/message_relativeLayout"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_margin="4dp"
+            android:id="@+id/message_relativeLayout"
+            android:layout_alignParentBottom="true">
+            <RelativeLayout
+                android:id="@+id/message_relativeLayout2"
+                android:layout_width="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="12dp"
+                android:layout_centerInParent="true"
+                android:layout_height="45dp"
+                android:layout_toRightOf="@id/sendFiles"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/button"
+                >
+
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_insert_emoticon_black_24dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="6dp"
+                    android:id="@+id/emoticons"/>
+
+
+                <hani.momanii.supernova_emoji_library.Helper.EmojiconEditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/emoticons"
+                    android:layout_toLeftOf="@+id/audio_voice_message"
+                    android:id="@+id/messagesEmotions"
+                    android:hint="Messages"
+                    android:backgroundTint="@android:color/transparent"
+                    android:layout_centerInParent="true"
+                    android:gravity="start"/>
+
+
+
+
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="6dp"
+                    android:src="@drawable/ic_keyboard_voice_black_24dp"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/audio_voice_message"/>
+
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="6dp"
+                    android:src="@drawable/ic_send_black_24dp"
+                    android:background="@android:color/transparent"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/sendMessage"
+                    tools:ignore="UnusedAttribute" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/add"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="6dp"
+                android:background="@android:color/transparent"
+                android:id="@+id/sendFiles"
+                tools:ignore="UnusedAttribute" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

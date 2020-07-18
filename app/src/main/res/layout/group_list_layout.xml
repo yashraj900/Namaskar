@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardElevation="0dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@android:color/white"
+    app:contentPadding="5dp">
+
+
+   <RelativeLayout
+       android:background="@android:color/transparent"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <de.hdodenhof.circleimageview.CircleImageView
+           android:layout_width="55dp"
+           android:layout_height="55dp"
+           android:src="@mipmap/account"
+           android:id="@+id/profile"/>
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="name"
+           android:fontFamily="@font/roboto_medium"
+           android:textSize="18sp"
+           android:textColor="#000"
+           android:layout_toRightOf="@+id/profile"
+           android:layout_marginLeft="10dp"
+           android:id="@+id/group_name"/>
+
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Sender name: "
+           android:layout_toRightOf="@id/profile"
+           android:layout_below="@+id/group_name"
+           android:layout_marginLeft="10dp"
+           android:textColor="#AB000000"
+           android:id="@+id/sender_name"/>
+
+       <TextView
+           android:id="@+id/groupLastMessage"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="last message"
+           android:layout_toRightOf="@id/sender_name"
+           android:layout_below="@id/group_name"
+           android:layout_marginLeft="6dp"
+           android:singleLine="true"/>
+   </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>
